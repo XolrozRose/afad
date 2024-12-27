@@ -1,8 +1,31 @@
-/* General Styles */
+@font-face {
+  font-family: 'Determination';
+  src: url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Determination/Determination%20Mono.woff2') format('woff2'),
+       url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Determination/Determination%20Mono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ComicSans';
+  src: url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Comic%20Sans/Comic%20Sans.woff2') format('woff2'),
+       url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Comic%20Sans/Comic%20Sans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Papyrus';
+  src: url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Papyrus/Papyrus.woff2') format('woff2'),
+       url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Papyrus/Papyrus.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
+  font-family: 'Determination', Arial, sans-serif; /* Default font is Determination */
   background-color: black;
   color: white;
-  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 20px;
 }
@@ -10,68 +33,78 @@ body {
 .dialogue-box {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 20px;
-  padding: 10px 15px;
-  border: 2px solid white;
   background-color: black;
-  max-width: 800px;
+  color: white;
+  border: 4px solid white;
+  padding: 10px;
+  margin-bottom: 20px;
+  max-width: 70%;
+  white-space: pre-wrap; /* Preserve text formatting */
+}
+
+.dialogue-box.left {
+  margin-left: 0;
+}
+
+.dialogue-box.right {
+  margin-left: auto;
 }
 
 .dialogue-box img {
   width: 40px;
   height: 40px;
   margin-right: 10px;
+  align-self: flex-start;
 }
 
 .dialogue-box .asterisk {
-  font-size: 1.5rem;
-  margin-right: 5px;
-  line-height: 1; /* Aligns with text */
-  display: inline-block;
-  vertical-align: top; /* Ensures it stays at the top line */
+  flex-shrink: 0;
+  margin-right: 10px;
+  font-family: 'Determination';
 }
 
 .dialogue-box .text {
-  font-size: 1.2rem;
-  line-height: 1.5;
+  flex-grow: 1;
+  font-family: 'Determination';
 }
 
-.dialogue-box.left {
-  flex-direction: row;
+.dialogue-box.comicsans .asterisk,
+.dialogue-box.comicsans .text {
+  font-family: ComicSans;
 }
 
-.dialogue-box.right {
-  flex-direction: row-reverse;
+.dialogue-box.papyrus .asterisk,
+.dialogue-box.papyrus .text {
+  font-family: Papyrus;
 }
 
 .narration-box {
-  padding: 10px 15px;
-  border: 2px solid white;
+  display: flex;
   background-color: black;
-  max-width: 800px;
+  color: white;
+  border: 4px solid white;
+  padding: 10px;
   margin-bottom: 20px;
+  white-space: pre-wrap; /* Preserve text formatting */
 }
 
 .narration-box .asterisk {
-  font-size: 1.5rem;
-  margin-right: 5px;
+  flex-shrink: 0;
+  margin-right: 10px;
+  font-family: 'Determination';
 }
 
 .narration-box .text {
-  font-size: 1.2rem;
-  line-height: 1.5;
+  flex-grow: 1;
+  font-family: 'Determination';
 }
 
-/* Sans Font Styles */
-.sans {
-  font-family: 'ComicSans', sans-serif;
-}
-
-/* Text Colors */
 .yellow-text {
   color: yellow;
+  display: inline; /* Ensure inline behavior */
 }
 
 .red-text {
   color: red;
+  display: inline; /* Ensure inline behavior */
 }
