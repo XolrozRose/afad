@@ -51,8 +51,10 @@ body {
 }
 
 .dialogue-box img {
-  width: 100px;
-  height: 100px;
+  flex-shrink: 0; /* Prevent shrinking */
+  max-width: none; /* Allow images to grow beyond container constraints */
+  width: 120px; /* Adjust to desired size */
+  height: 120px; /* Ensure proportional scaling */
   margin-right: 10px;
   align-self: flex-start;
 }
