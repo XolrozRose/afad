@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'Determination';
+  src: url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Determination/Determination%20Mono.woff2') format('woff2'),
+       url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Determination/Determination%20Mono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ComicSans';
+  src: url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Comic%20Sans/Comic%20Sans.woff2') format('woff2'),
+       url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Comic%20Sans/Comic%20Sans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Papyrus';
+  src: url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Papyrus/Papyrus.woff2') format('woff2'),
+       url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Papyrus/Papyrus.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.left, .right, .narration {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.chat-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border: 4px solid white;
+  max-width: 70%;
+  margin-bottom: 10px;
+}
+
+.chat-text img {
+  width: 40px;
+  height: 40px;
+  align-self: flex-start;
+}
+
+.chat-text p, .narration p {
+  margin: 0;
+  white-space: pre-wrap; /* Preserve text formatting */
+}
+
+.chat-text[data-asterisk="true"] p::before,
+.narration[data-asterisk="true"] p::before {
+  content: "* ";
+  color: white;
+}
+
+.narration {
+  border: 4px solid white;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: black;
+  display: flex;
+  gap: 10px;
+}
+
+.narration[data-asterisk="true"] {
+  align-items: flex-start;
+}
+
+.narration .asterisk {
+  flex-shrink: 0;
+  color: white;
+  font-family: Determination;
+}
+
+.narration .text {
+  flex-grow: 1;
+  font-family: Determination;
+  white-space: pre-wrap;
+}
+
+.yellow-text {
+  color: yellow;
+  display: inline; /* Ensure inline behavior */
+}
