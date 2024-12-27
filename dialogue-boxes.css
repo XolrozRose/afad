@@ -51,10 +51,11 @@ body {
 }
 
 .dialogue-box img {
-  flex-shrink: 0; /* Prevent shrinking */
-  max-width: none; /* Allow images to grow beyond container constraints */
-  width: 30px; /* Adjust to desired size */
-  height: 30px; /* Ensure proportional scaling */
+  width: 60px !important; /* Force width to 60px */
+  height: 60px !important; /* Force height to 60px */
+  max-width: 60px !important; /* Prevent images from scaling larger */
+  max-height: 60px !important; /* Prevent images from scaling larger */
+  object-fit: contain; /* Adjust the image inside the container without distortion */
   margin-right: 10px;
   align-self: flex-start;
 }
