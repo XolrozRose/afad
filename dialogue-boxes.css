@@ -53,8 +53,8 @@ body {
 .dialogue-box img {
   flex-shrink: 0; /* Prevent shrinking */
   max-width: none; /* Allow images to grow beyond container constraints */
-  width: 60px; /* Adjust to desired size */
-  height: 60px; /* Ensure proportional scaling */
+  width: 30px; /* Adjust to desired size */
+  height: 30px; /* Ensure proportional scaling */
   margin-right: 10px;
   align-self: flex-start;
 }
