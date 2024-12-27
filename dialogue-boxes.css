@@ -1,1 +1,110 @@
+@font-face {
+  font-family: 'Determination';
+  src: url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Determination/Determination%20Mono.woff2') format('woff2'),
+       url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Determination/Determination%20Mono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'ComicSans';
+  src: url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Comic%20Sans/Comic%20Sans.woff2') format('woff2'),
+       url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Comic%20Sans/Comic%20Sans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Papyrus';
+  src: url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Papyrus/Papyrus.woff2') format('woff2'),
+       url('https://raw.githubusercontent.com/ThetaApps/font-undertale/master/Papyrus/Papyrus.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Determination', Arial, sans-serif; /* Default font is Determination */
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.dialogue-box {
+  display: flex;
+  align-items: flex-start;
+  background-color: black;
+  color: white;
+  border: 4px solid white;
+  padding: 10px;
+  margin-bottom: 20px;
+  max-width: 70%;
+  white-space: pre-wrap; /* Preserve text formatting */
+}
+
+.dialogue-box.left {
+  margin-left: 0;
+}
+
+.dialogue-box.right {
+  margin-left: auto;
+}
+
+.dialogue-box img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  align-self: flex-start;
+}
+
+.dialogue-box .asterisk {
+  flex-shrink: 0;
+  margin-right: 10px;
+  font-family: 'Determination';
+}
+
+.dialogue-box .text {
+  flex-grow: 1;
+  font-family: 'Determination';
+}
+
+.dialogue-box.comicsans .asterisk,
+.dialogue-box.comicsans .text {
+  font-family: ComicSans;
+}
+
+.dialogue-box.papyrus .asterisk,
+.dialogue-box.papyrus .text {
+  font-family: Papyrus;
+}
+
+.narration-box {
+  display: flex;
+  background-color: black;
+  color: white;
+  border: 4px solid white;
+  padding: 10px;
+  margin-bottom: 20px;
+  white-space: pre-wrap; /* Preserve text formatting */
+}
+
+.narration-box .asterisk {
+  flex-shrink: 0;
+  margin-right: 10px;
+  font-family: 'Determination';
+}
+
+.narration-box .text {
+  flex-grow: 1;
+  font-family: 'Determination';
+}
+
+.yellow-text {
+  color: yellow;
+  display: inline; /* Ensure inline behavior */
+}
+
+.red-text {
+  color: red;
+  display: inline; /* Ensure inline behavior */
+}
