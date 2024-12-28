@@ -55,6 +55,8 @@ body {
   height: 50px;
   margin-right: 10px;
   align-self: flex-start;
+  pointer-events: none;
+  user-select: none;
 }
 
 .dialogue-box .asterisk {
