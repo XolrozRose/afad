@@ -55,6 +55,12 @@ body {
   height: 50px;
   margin-right: 10px;
   align-self: flex-start;
+  /* Stacked shadows to simulate an outline */
+  filter: 
+    drop-shadow(1px 0 white) /* Right */
+    drop-shadow(-1px 0 white) /* Left */
+    drop-shadow(0 1px white) /* Bottom */
+    drop-shadow(0 -1px white); /* Top */
 }
 
 .dialogue-box .asterisk {
