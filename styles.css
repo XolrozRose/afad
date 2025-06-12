@@ -39,7 +39,7 @@ chat-box[data-side="right"] .trapezoid-content {
 .trapezoid-content {
   background: white;
   color: black;
-  font-size: 17px;
+  font-size: 16px;
   max-width: 500px;
   display: flex;
   align-items: stretch;
@@ -81,7 +81,7 @@ chat-box[data-side="right"] .trapezoid-content {
 .narration-box {
   background: #160D44;
   color: white;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: normal;
   padding: 15px 25px;
   max-width: 600px;
