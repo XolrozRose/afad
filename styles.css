@@ -30,7 +30,7 @@ chat-box[data-side="right"] .trapezoid-content {
 }
 
 .trapezoid-border {
-  background: #241260;
+  background: #160D44;
   padding: 4px;
   display: inline-block;
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
@@ -39,7 +39,7 @@ chat-box[data-side="right"] .trapezoid-content {
 .trapezoid-content {
   background: white;
   color: black;
-  font-size: 15px;
+  font-size: 17px;
   max-width: 500px;
   display: flex;
   align-items: stretch;
@@ -47,7 +47,7 @@ chat-box[data-side="right"] .trapezoid-content {
 }
 
 .icon-section {
-  background: #241260;
+  background: #160D44;
   padding: 8px;
   flex-shrink: 0;
   align-self: stretch;
@@ -79,9 +79,9 @@ chat-box[data-side="right"] .trapezoid-content {
 }
 
 .narration-box {
-  background: #241260;
+  background: #160D44;
   color: white;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: normal;
   padding: 15px 25px;
   max-width: 600px;
