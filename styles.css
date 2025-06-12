@@ -1,9 +1,12 @@
-/* Base Styles */
-body {
+/* Reset + Base Layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.40);
-  padding: 40px;
   font-family: 'Bahnschrift', sans-serif;
   box-sizing: border-box;
+  overflow: hidden; /* Prevent scrollbars */
 }
 
 *, *::before, *::after {
@@ -12,18 +15,19 @@ body {
   padding: 0;
 }
 
+/* Chat box container */
 chat-box {
   display: block;
   margin-bottom: 20px;
 }
 
+/* Right-side boxes */
 chat-box[data-side="right"] {
   text-align: right;
   display: flex;
   justify-content: flex-end;
 }
 
-/* Trapezoid Borders */
 chat-box[data-side="right"] .trapezoid-border {
   clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
 }
@@ -33,6 +37,7 @@ chat-box[data-side="right"] .trapezoid-content {
   flex-direction: row-reverse;
 }
 
+/* Outer trapezoid border */
 .trapezoid-border {
   background: #160D44;
   padding: 4px;
@@ -40,10 +45,11 @@ chat-box[data-side="right"] .trapezoid-content {
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
 }
 
+/* Inner white content box */
 .trapezoid-content {
   background: white;
   color: black;
-  font-size: clamp(15px, 2.2vw, 17px); /* Responsive font */
+  font-size: clamp(16px, 2.3vw, 17px); /* Responsive text size */
   line-height: 1.5;
   max-width: clamp(280px, 80vw, 500px); /* Responsive width */
   width: 100%;
@@ -52,7 +58,7 @@ chat-box[data-side="right"] .trapezoid-content {
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
 }
 
-/* Icon Styles */
+/* Icon wrapper */
 .icon-section {
   background: #160D44;
   padding: 8px;
@@ -60,6 +66,7 @@ chat-box[data-side="right"] .trapezoid-content {
   align-self: stretch;
 }
 
+/* Icon */
 .icon {
   width: clamp(40px, 9vw, 60px);
   height: clamp(40px, 9vw, 60px);
@@ -68,9 +75,9 @@ chat-box[data-side="right"] .trapezoid-content {
   background-repeat: no-repeat;
 }
 
-/* Text Styles */
+/* Text content area */
 .text-section {
-  padding: 16px 15px 10px 15px;
+  padding: 18px 15px 12px 15px; /* Adjusted top/bottom for new font size */
   flex: 1;
   display: flex;
   align-items: center;
@@ -81,7 +88,7 @@ chat-box[data-side="right"] .trapezoid-content {
   align-items: center;
 }
 
-/* Narration Box */
+/* Narration area */
 .narration-container {
   text-align: center;
   margin: 30px 0;
@@ -97,14 +104,14 @@ chat-box[data-side="right"] .trapezoid-content {
   margin: 0 auto;
 }
 
-/* Additional adjustments for small screens */
+/* Mobile tweaks */
 @media (max-width: 480px) {
   body {
     padding: 20px;
   }
 
   .text-section {
-    padding: 14px 12px 9px 12px;
+    padding: 16px 12px 10px 12px;
   }
 
   .narration-box {
