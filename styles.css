@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
   background-color: rgba(0, 0, 0, 0.40);
   padding: 40px;
@@ -7,6 +8,8 @@ body {
 
 *, *::before, *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 chat-box {
@@ -20,6 +23,7 @@ chat-box[data-side="right"] {
   justify-content: flex-end;
 }
 
+/* Trapezoid Borders */
 chat-box[data-side="right"] .trapezoid-border {
   clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
 }
@@ -39,14 +43,15 @@ chat-box[data-side="right"] .trapezoid-content {
 .trapezoid-content {
   background: white;
   color: black;
-  font-size: 17px;              /* Increased font size */
-  line-height: 1.4;             /* Optional but recommended for spacing */
+  font-size: clamp(15px, 2.2vw, 17px); /* Responsive font size */
+  line-height: 1.5;
   max-width: 500px;
   display: flex;
   align-items: stretch;
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
 }
 
+/* Icon Styles */
 .icon-section {
   background: #160D44;
   padding: 8px;
@@ -62,8 +67,9 @@ chat-box[data-side="right"] .trapezoid-content {
   background-repeat: no-repeat;
 }
 
+/* Text Styles */
 .text-section {
-  padding: 13px 15px 8px 15px; /* Top padding bumped from 10px to 13px */
+  padding: 16px 15px 10px 15px; /* Top padding increased to avoid all clipping */
   flex: 1;
   display: flex;
   align-items: center;
@@ -74,6 +80,7 @@ chat-box[data-side="right"] .trapezoid-content {
   align-items: center;
 }
 
+/* Narration Box */
 .narration-container {
   text-align: center;
   margin: 30px 0;
@@ -82,9 +89,33 @@ chat-box[data-side="right"] .trapezoid-content {
 .narration-box {
   background: #160D44;
   color: white;
-  font-size: 15px;
+  font-size: clamp(14px, 2vw, 15px);
   font-weight: normal;
   padding: 15px 25px;
   max-width: 600px;
   margin: 0 auto;
+}
+
+/* Responsive Scaling for Narrow Screens */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  .trapezoid-content {
+    max-width: 100%;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .text-section {
+    padding: 14px 12px 9px 12px;
+  }
+
+  .narration-box {
+    padding: 12px 18px;
+  }
 }
