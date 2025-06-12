@@ -1,7 +1,12 @@
 body {
-  background-color: rgba(0, 0, 0, 0.50);
+  background-color: rgba(0, 0, 0, 0.60);
   padding: 40px;
   font-family: 'Bahnschrift', sans-serif;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 chat-box {
@@ -34,10 +39,11 @@ chat-box[data-side="right"] .trapezoid-content {
 .trapezoid-content {
   background: white;
   color: black;
-  font-size: 17px;
+  font-size: 15px;
   max-width: 500px;
   display: flex;
   align-items: stretch;
+  padding-top: 4px; /* Prevent text clipping near top left corner */
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
 }
 
@@ -76,7 +82,7 @@ chat-box[data-side="right"] .trapezoid-content {
 .narration-box {
   background: #241260;
   color: white;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: normal;
   padding: 15px 25px;
   max-width: 600px;
