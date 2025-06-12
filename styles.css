@@ -43,9 +43,10 @@ chat-box[data-side="right"] .trapezoid-content {
 .trapezoid-content {
   background: white;
   color: black;
-  font-size: clamp(15px, 2.2vw, 17px); /* Responsive font size */
+  font-size: clamp(15px, 2.2vw, 17px); /* Responsive font */
   line-height: 1.5;
-  max-width: 500px;
+  max-width: clamp(280px, 80vw, 500px); /* Responsive width */
+  width: 100%;
   display: flex;
   align-items: stretch;
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
@@ -60,8 +61,8 @@ chat-box[data-side="right"] .trapezoid-content {
 }
 
 .icon {
-  width: 60px;
-  height: 60px;
+  width: clamp(40px, 9vw, 60px);
+  height: clamp(40px, 9vw, 60px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -69,7 +70,7 @@ chat-box[data-side="right"] .trapezoid-content {
 
 /* Text Styles */
 .text-section {
-  padding: 16px 15px 10px 15px; /* Top padding increased to avoid all clipping */
+  padding: 16px 15px 10px 15px;
   flex: 1;
   display: flex;
   align-items: center;
@@ -96,19 +97,10 @@ chat-box[data-side="right"] .trapezoid-content {
   margin: 0 auto;
 }
 
-/* Responsive Scaling for Narrow Screens */
-@media (max-width: 600px) {
+/* Additional adjustments for small screens */
+@media (max-width: 480px) {
   body {
     padding: 20px;
-  }
-
-  .trapezoid-content {
-    max-width: 100%;
-  }
-
-  .icon {
-    width: 50px;
-    height: 50px;
   }
 
   .text-section {
@@ -117,5 +109,9 @@ chat-box[data-side="right"] .trapezoid-content {
 
   .narration-box {
     padding: 12px 18px;
+  }
+
+  chat-box {
+    margin-bottom: 15px;
   }
 }
