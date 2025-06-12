@@ -1,0 +1,84 @@
+body {
+  background-color: #eee;
+  padding: 40px;
+  font-family: 'Bahnschrift', sans-serif;
+}
+
+chat-box {
+  display: block;
+  margin-bottom: 20px;
+}
+
+chat-box[data-side="right"] {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+chat-box[data-side="right"] .trapezoid-border {
+  clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+chat-box[data-side="right"] .trapezoid-content {
+  clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
+  flex-direction: row-reverse;
+}
+
+.trapezoid-border {
+  background: #241260;
+  padding: 4px;
+  display: inline-block;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+}
+
+.trapezoid-content {
+  background: white;
+  color: black;
+  font-size: 17px;
+  max-width: 500px;
+  display: flex;
+  align-items: stretch;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+}
+
+.icon-section {
+  background: #241260;
+  padding: 8px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.text-section {
+  padding: 8px 20px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.text-content {
+  display: flex;
+  align-items: center;
+}
+
+.narration-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.narration-box {
+  background: #241260;
+  color: white;
+  font-size: 17px;
+  font-weight: normal;
+  padding: 15px 25px;
+  max-width: 600px;
+  margin: 0 auto;
+}
