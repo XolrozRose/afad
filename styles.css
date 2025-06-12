@@ -39,7 +39,8 @@ chat-box[data-side="right"] .trapezoid-content {
 .trapezoid-content {
   background: white;
   color: black;
-  font-size: 15px;
+  font-size: 17px;              /* Increased font size */
+  line-height: 1.4;             /* Optional but recommended for spacing */
   max-width: 500px;
   display: flex;
   align-items: stretch;
@@ -62,7 +63,7 @@ chat-box[data-side="right"] .trapezoid-content {
 }
 
 .text-section {
-  padding: 10px 15px 8px 15px; /* Top padding increased to avoid clipping */
+  padding: 13px 15px 8px 15px; /* Top padding bumped from 10px to 13px */
   flex: 1;
   display: flex;
   align-items: center;
