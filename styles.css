@@ -1,5 +1,5 @@
 body {
-  background-color: #eee;
+  background-color: rgba(0, 0, 0, 0.25);
   padding: 40px;
   font-family: 'Bahnschrift', sans-serif;
 }
@@ -34,7 +34,7 @@ chat-box[data-side="right"] .trapezoid-content {
 .trapezoid-content {
   background: white;
   color: black;
-  font-size: 15px;
+  font-size: 17px;
   max-width: 500px;
   display: flex;
   align-items: stretch;
@@ -76,7 +76,7 @@ chat-box[data-side="right"] .trapezoid-content {
 .narration-box {
   background: #241260;
   color: white;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: normal;
   padding: 15px 25px;
   max-width: 600px;
