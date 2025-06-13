@@ -3,6 +3,7 @@ body {
   padding: 40px;
   font-family: 'Bahnschrift', sans-serif;
   box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
 *, *::before, *::after {
@@ -99,10 +100,11 @@ chat-box[data-side="right"] .icon {
   margin: 0 auto;
 }
 
-/* NEW: Heading block with full-width title and author */
+/* Clean and overflow-safe heading */
 .heading {
-  width: 100vw;
-  margin-left: calc(-40px); /* cancels body padding */
+  position: relative;
+  left: -40px; /* Shift left by body padding */
+  width: calc(100% + 80px); /* Extend both sides */
   background: #241260;
   color: white;
   text-align: center;
