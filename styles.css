@@ -3,7 +3,7 @@ body {
   padding: 40px;
   font-family: 'Bahnschrift', sans-serif;
   box-sizing: border-box;
-  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -103,8 +103,8 @@ chat-box[data-side="right"] .icon {
 /* Clean and overflow-safe heading */
 .heading {
   position: relative;
-  left: -40px; /* Shift left by body padding */
-  width: calc(100% + 80px); /* Extend both sides */
+  left: -40px;
+  width: calc(100% + 80px);
   background: #241260;
   color: white;
   text-align: center;
