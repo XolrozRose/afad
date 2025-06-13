@@ -11,7 +11,7 @@ body {
 
 chat-box {
   display: block;
-  margin: 30px 20px; /* ensures spacing from all container edges */
+  margin: 30px 20px;
 }
 
 chat-box[data-side="right"] {
@@ -64,7 +64,6 @@ chat-box[data-side="right"] .trapezoid-content {
   background-repeat: no-repeat;
 }
 
-/* Icon offsets */
 chat-box[data-side="left"] .icon {
   margin-left: -6px;
 }
@@ -87,7 +86,7 @@ chat-box[data-side="right"] .icon {
 
 .narration-container {
   text-align: center;
-  margin: 30px 20px; /* matches chat-box spacing */
+  margin: 30px 20px;
 }
 
 .narration-box {
@@ -98,4 +97,26 @@ chat-box[data-side="right"] .icon {
   padding: 15px 25px;
   max-width: 800px;
   margin: 0 auto;
+}
+
+/* NEW: Heading block with full-width title and author */
+.heading {
+  width: 100vw;
+  margin-left: calc(-40px); /* cancels body padding */
+  background: #241260;
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.heading .title {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.heading .author {
+  font-size: 30px;
+  font-weight: normal;
+  opacity: 0.85;
 }
