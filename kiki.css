@@ -1,0 +1,119 @@
+body {
+  background: transparent;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.desktop-icon {
+  width: 64px;
+  text-align: center;
+  cursor: default;
+  color: white;
+  user-select: none;
+  position: absolute;
+  font-family: "LeviWindows", sans-serif;
+}
+
+.desktop-icon div {
+  font-size: 20px;
+  margin-top: -5px;
+}
+
+.desktop-icon img {
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  user-select: none;
+}
+
+.window {
+  position: absolute;
+  display: none;
+  z-index: 10;
+  width: 500px;
+}
+
+.window .title-bar {
+  background: linear-gradient(to right, #5b2c6f, #af7ac5);
+  border-bottom: 2px solid #6c3483;
+  color: white;
+  cursor: default;
+  user-select: none;
+}
+
+.banner {
+  padding: 5px 10px;
+  border-bottom: 1px solid #999;
+  user-select: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: transparent;
+  margin: 0;
+}
+
+.banner b {
+  font-weight: bold;
+}
+
+.link {
+  color: #0000ee;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Scrolling GIF banner */
+.scroll-banner {
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  background: transparent;
+  pointer-events: none;
+}
+
+.scroll-banner .track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 40s linear infinite;
+}
+
+.scroll-banner img {
+  height: 20px;
+  margin-right: 2px;
+  vertical-align: middle;
+  image-rendering: pixelated;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* YouTube window specific tweaks */
+#ytWindow {
+  width: 420px;
+  height: 260px;
+}
+
+#ytWindow .window-body {
+  padding: 3px;
+  margin: 0;
+  height: calc(100% - 28px);
+  display: flex;
+  flex-direction: column;
+}
+
+#ytFrame {
+  flex-grow: 1;
+  width: 100%;
+  border: 0;
+  display: block;
+}
